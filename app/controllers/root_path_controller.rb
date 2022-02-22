@@ -1,0 +1,2 @@
+class RootPathController < ApplicationController
+end
