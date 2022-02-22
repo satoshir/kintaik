@@ -12,5 +12,11 @@ class SessionsController < ApplicationController
       flash.now[:danger] = '認証に失敗しました。'
       render :new
     end
+    
+  def destroy
+    log_out
+    flash[:success] = 'ログアウトしました。'
+    redirect_to root_url
+  end
   end
 end
